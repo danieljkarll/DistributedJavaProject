@@ -1,0 +1,67 @@
+.navigationWrapper{
+    width: 90%;
+    margin: 0 auto;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-top: 15px;
+    grid-gap: 25px
+}
+
+.urlNav{
+    background: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 17px;
+}
+.urlNav:hover{
+    background-color: #5fa4ff
+}
+
+.companionSummary{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(353px, 1fr));
+    outline: 5px solid green;
+    grid-gap: 25px;
+    padding: 30px;
+}
+
+.person{
+    align: center;
+    text-align: center;
+    outline: 2px solid black;
+}
+.companionDetailTitles{
+    font-size: 32px;
+    font-weight:bold;
+}
+#errorText{
+    color:red;
+}
+#disagreeText{
+    background-color: white;
+    font-size: 25px;
+}
+#addCompanion{
+    display: inline;
+    background-color: white;
+    text-align:center;
+    font-size: 32px;
+    font-weight: bold;
+}
+.homeInfo{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+#content{
+    background-color: #6b77ff ;
+    outline: 5px solid green;
+
+}
+.pageText{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    display: inline;
+    font-size: 25px;
+    height: fit-content;
+}

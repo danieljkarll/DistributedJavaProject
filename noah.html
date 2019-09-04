@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="allStyles.css">
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<div class="navigationWrapper">
+    <a href="index.html" id="indexPage" class="urlNav">
+        Home
+    </a>
+    <a href="companions.html" id="companionsPage" class="urlNav">
+        Add Companions
+    </a>
+    <a href="currentCompanions.html" id="currentCompanionsPage" class="urlNav">
+        Current Companions
+    </a>
+    <div href="courses" id="coursePage" class="urlNav">
+        View Courses
+    </div>
+</div>
+<div id="content">
+    <div id="addCompanion">
+        <a href = "currentCompanions.html" >
+            <div center>Add noah as a companion</div>
+        </a>
+    </div>
+    <div class="homeInfo">
+        <div class="noahPage">
+            <img src="img/noah.png" width="90%" height="486">
+            <button id="disagreeWithSkills">I disagree with his skills</button>
+            <div id="disagreeText" hidden>
+                <h2>What do you rate his skills?</h2>
+                <p>
+                Talking:
+                1<input type="radio" name="skills" value="1">
+                2<input type="radio" name="skills" value="2">
+                3<input type="radio" name="skills" value="3">
+                4<input type="radio" name="skills" value="4">
+                5<input type="radio" name="skills" value="5">
+                <br>
+                    Tech Talent:
+                    1<input type="radio" name="techTalent" value="1">
+                    2<input type="radio" name="techTalent" value="2">
+                    3<input type="radio" name="techTalent" value="3">
+                    4<input type="radio" name="techTalent" value="4">
+                    5<input type="radio" name="techTalent" value="5">
+                    <br>
+                    Video games:
+                    1<input type="radio" name="videoGames" value="1">
+                    2<input type="radio" name="videoGames" value="2">
+                    3<input type="radio" name="videoGames" value="3">
+                    4<input type="radio" name="videoGames" value="4">
+                    5<input type="radio" name="videoGames" value="5">
+                    <br>
+                    Explain your reasoning
+                    <input type="text" id="reasoning">
+                <p id="errorText" hidden>You must submit a reasoning</p>
+                    <button id="submitSkills" type="submit">Submit</button>
+                </p>
+
+
+            </div>
+        </div>
+        <div class="pageText">
+            <h1>Noah Wiley</h1>
+            <span class="companionDetailTitles">Bio: </span><span>Hi, I'm a fun outgoing guy working on becoming a professional tech support. I like long walks on the beach and sucking the soul out of people's routers</span>
+            <p class="companionDetailTitles" align="center">Best Skills:<p>
+
+            <p class="companionDetailTitles">Talking</p> <p><img src="img/3Star.png"></p>
+            <p class="companionDetailTitles">Technologic Talent</p> <p><img src="img/4Star.png"></p>
+            <p class="companionDetailTitles">Video Games</p> <p><img src="img/starTemplate.png"></p>
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="source.js"></script>
+</html>
