@@ -29,25 +29,33 @@ public class Search extends HttpServlet {
 
             try{
                 String searchTerm = request.getParameter("searchTerm");
+                //String searchTerm = request.getParameter("searchTerm");
                 Class.forName("org.apache.derby.jdbc.EmbeddedDriver");
                 String path = getServletContext().getRealPath(DATABASE_PATH);
 
                 conn = DriverManager.getConnection(Driver_Name +path,USER, PW);
 
-                String sql = "SELECT name FROM Person WHERE name= ?";
+                String sql = "SELECT * FROM Person WHERE name = ?";
 
                 pstmt = conn.prepareStatement(sql);
 
                 pstmt.setString(1, searchTerm);
-
+                //pstmt = conn.prepareStatement("Select * from Person where name=" + searchTerm );
                 rset = pstmt.executeQuery();
 
                 StringBuilder html = new StringBuilder("<html><body>");
 
                 while(rset.next()){
                     int id = rset.getInt(1);
+                    String name = rset.getString(2);
+                    String picture = rset.getString(3);
+
                     html.append("<p>ID:").append(id).append("</p>");
+                    html.append("<p>Name:").append(id).append("</p>");
+                    html.append("<p>Picture Location:").append(id).append("</p>");
                 }
+                html.append("<p>Hit</p>");
+
                 html.append("</body></html>");
 
                 response.getWriter().print(html.toString());
