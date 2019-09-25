@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="updateSql" class="springsxml.Services.UpdateSqlLog">
+
+    </bean>
+    <bean id="Person" class="springsxml.beans.Person">
+        <property name="updateSql" ref="updateSql"></property>
+        <property name="Name" value="${c1.name}"></property>
+        <property name="SelfieFileName" value="${c1.SSelfieFileName}"></property>
+        <property name="Bio" value="${c1.Bio}"></property>
+        <property name="GenderID" value="${c1.GenderID}"></property>
+    </bean>
+</beans>
