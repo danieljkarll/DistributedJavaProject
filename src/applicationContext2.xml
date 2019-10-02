@@ -5,14 +5,13 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath:person.properties"/>
 
-    <bean id="updateSql" class="springsxml.Services.UpdateSqlLog">
+    <bean id="getSqlLog" class="springsxml.Services.getSqlLog">
 
     </bean>
     <bean id="Person" class="springsxml.beans.Person">
-        <property name="logService" ref="updateSql"></property>
-
-        <property name="Name" value="${c1.name}"></property>
-        <property name="SelfieFileName" value="${c1.SelfieFileName}"></property>
-        <property name="Bio" value="${c1.Bio}"></property>
+        <property name="logService" ref="getSqlLog"></property>
+        <property name="Name" value="${c2.name}"></property>
+        <property name="SelfieFileName" value="${c2.SelfieFileName}"></property>
+        <property name="Bio" value="${c2.Bio}"></property>
     </bean>
 </beans>
