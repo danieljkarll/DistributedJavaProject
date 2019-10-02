@@ -7,10 +7,8 @@ import springsxml.beans.Person;
 public class SpringApp {
     public static void main(String[] args){
         System.out.println("UpdateSqlLog Class: ");
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext2.xml");
         Person person1 = context.getBean("Person", Person.class);
-        System.out.println("getSqlLog Class: ");
-
         person1.getName();
         person1.getBio();
         person1.getGenderID();

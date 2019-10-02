@@ -1,7 +1,5 @@
 package springsxml.beans;
 
-import org.apache.commons.logging.Log;
-import springsxml.Services.UpdateSqlLog;
 import springsxml.Services.LogService;
 import java.util.List;
 
@@ -10,8 +8,6 @@ public class Person {
 
     }
     public String getName() {
-
-        logService.log("Name");
         return Name;
     }
 
@@ -22,7 +18,6 @@ public class Person {
     }
 
     public String getSelfieFileName() {
-        logService.log("(SelfieFileName)");
         return SelfieFileName;
     }
 
@@ -32,7 +27,6 @@ public class Person {
     }
 
     public String getBio() {
-        logService.log("Bio");
         return Bio;
     }
 
@@ -42,7 +36,6 @@ public class Person {
     }
 
     public int getGenderID() {
-        logService.log("Gender");
         return GenderID;
     }
 
@@ -57,7 +50,6 @@ public class Person {
 
     public List<Skill> getSkills()
     {
-        logService.log("Skills");
         return skills;
     }
 

@@ -5,7 +5,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder location="classpath:person.properties"/>
 
-    <bean id="updateSql" class="springsxml.Services.UpdateSqlLog">
+    <bean id="updateSql" class="springsxml.Services.LogToConsole">
 
     </bean>
     <bean id="Person" class="springsxml.beans.Person">

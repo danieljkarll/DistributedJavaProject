@@ -1,6 +1,6 @@
 package springsxml.Services;
 
-public class UpdateSqlLog implements LogService{
+public class LogToConsole implements LogService{
     @Override
     public void log(String item) {
         System.out.println("Update went through succesfully for: " +item);
