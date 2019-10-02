@@ -16,7 +16,7 @@ public class SpringApp {
         //ClassPathXmlApplicationContext context2 = new ClassPathXmlApplicationContext("applicationContext2.xml");
 
        // System.out.println(person1.getName());
-        //LogService updateThis = context.getBean()
+        // LogService updateThis = context.getBean()
         context.close();
     }
 }

@@ -1,5 +1,7 @@
 package springsxml.Services;
 
+import org.springframework.stereotype.Controller;
+
 public class LogToConsole implements LogService{
     @Override
     public void log(String item) {

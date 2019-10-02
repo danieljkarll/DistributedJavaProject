@@ -1,6 +1,8 @@
 package springsxml.Services;
+import org.springframework.stereotype.Controller;
 import java.util.logging.*;
 import java.io.*;
+
 public class LogToFile implements LogService{
     @Override
     public void log(String item) {

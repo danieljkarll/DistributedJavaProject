@@ -15,4 +15,5 @@
         <property name="SelfieFileName" value="${c1.SelfieFileName}"></property>
         <property name="Bio" value="${c1.Bio}"></property>
     </bean>
+
 </beans>
