@@ -29,19 +29,24 @@ public class HibernateApp {
     public static void main(String[] args) {
         HibernateApp demo = new HibernateApp();
         try {
-            //demo.createGender("IDK");
+
+            //demo.createGender("stuff");
             //demo.updateGender(3,"idk3");
+            //demo.readGenderId(2);
             //demo.deleteGender(3);
             //demo.readGenderId(3);
-            //demo.createPerson("Paul","paul.jpg","he is paul-like");
 
+
+           // demo.createPerson("Paul","paul.jpg","he is paul-like");
+         // demo.updatePerson(1,"Joe","joe.jpg","joe is joey");
+          //  demo.readPerson(0);
             //demo.deletePerson(2);
-            //demo.readPerson(1);
+            //demo.readPerson(2);
+
             //demo.createSkill("testSkill",1);
-            //demo.updateSkill(1,"test2",2);
+            //demo.updateSkill(2,"test2",2);
             //demo.deleteSkill(1);
-            demo.readSkill(2);
-            //demo.createSkill("testing",1);
+           // demo.readSkill(2);
         } finally {
             demo.close();
         }
@@ -103,7 +108,7 @@ public class HibernateApp {
     }
 
 /*Person*/
-private void createPerson(String name, String selfiefile, String bio, Gender thisGender){
+private void createPerson(String name, String selfiefile, String bio){
     Session session = factory.getCurrentSession();
 
     session.beginTransaction();
