@@ -4,6 +4,8 @@ import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
+@Table(name="person")
 public class Person {
 
     @Id
@@ -16,30 +18,30 @@ public class Person {
     private String selfiefile;
     @Column(name="bio")
     private String bio;
-    @Column(name="genderid")
-    private int genderid;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name="gender")
-    private List<Gender> genders;
+    // You dont need to delete any genders just read from it all
+    @ManyToOne(cascade = {CascadeType.DETACH,
+            CascadeType.MERGE,
+            CascadeType.PERSIST,
+            CascadeType.REFRESH})
+    @JoinColumn(name="genderid")
+    private Gender gender;
 
-    public void add(Gender gender) {
-        if (genders == null)
-            genders = new ArrayList<>();
-        genders.add(gender);
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender aGender) {
+        this.gender = aGender;
     }
 
 
-    public List<Gender> getGenders() {
-        return genders;
-    }
-
-    public void setGenders(List<Gender> genders) {
-        this.genders = genders;
-    }
-
-
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {CascadeType.DETACH,
+                    CascadeType.MERGE,
+                    CascadeType.PERSIST,
+                    CascadeType.REFRESH})
     @JoinTable(name="SKILLLEVELS",
             joinColumns = @JoinColumn(name="person_id"),
             inverseJoinColumns = @JoinColumn(name="skillID"))
@@ -66,18 +68,16 @@ public class Person {
                 ", name='" + name + '\'' +
                 ", selfiefile='" + selfiefile + '\'' +
                 ", bio='" + bio + '\'' +
-                ", genderid='" + genderid + '\'' +
                 '}';
     }
 
     public Person(){
         // no arg constructor
     }
-    public Person(String name, String selfiefile, String bio, int genderid) {
+    public Person(String name, String selfiefile, String bio) {
         this.name = name;
         this.selfiefile = selfiefile;
         this.bio = bio;
-        this.genderid = genderid;
     }
 
     public int getId() {
@@ -112,11 +112,4 @@ public class Person {
         this.bio = bio;
     }
 
-    public int getGenderid() {
-        return genderid;
-    }
-
-    public void setGenderid(int genderid) {
-        this.genderid = genderid;
-    }
 }

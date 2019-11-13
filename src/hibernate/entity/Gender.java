@@ -13,7 +13,10 @@ public class Gender {
     private int id;
     @Column(name="gender")
     private String gender;
-
+// If deleted it should delete in person also
+    @OneToMany(mappedBy = "gender",
+            cascade = CascadeType.ALL)
+    private List<Person> personList;
 
     public Gender(){
         // no arg constructor

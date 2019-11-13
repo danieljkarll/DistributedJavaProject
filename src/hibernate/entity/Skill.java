@@ -16,31 +16,24 @@ public class Skill {
     @Column(name="level")
     private int level;
 
-
-    @ManyToMany(cascade = CascadeType.ALL)
+    // Given cascade type all because it has to delete from
+    // person if one used is deleted
+    //Using lazy because its the fastest
+    @ManyToMany(fetch = FetchType.LAZY,
+            cascade = {CascadeType.ALL})
     @JoinTable(name="SKILLLEVELS",
             joinColumns = @JoinColumn(name="skillID"),
             inverseJoinColumns = @JoinColumn(name="person_id"))
     private List<Person> personList;
-/*
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name="SkillLevels",
-            joinColumns = @JoinColumn(name="genderId"),
-            inverseJoinColumns = @JoinColumn(name="person_id"))
-   */
+
+    public Skill(){
+        //No Arg constructor
+    }
 
     public Skill(String name, int level) {
         this.name = name;
         this.level = level;
     }
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name="SKILLLEVELS",
-            joinColumns = @JoinColumn(name="skillID"),
-            inverseJoinColumns = @JoinColumn(name="person_id"))
-    public List<Person> getPersonList() {
-        return personList;
-    }
-
     public void setPersonList(List<Person> personList) {
         this.personList = personList;
     }
