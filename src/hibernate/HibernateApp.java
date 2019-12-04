@@ -39,14 +39,14 @@ public class HibernateApp {
 
            // demo.createPerson("Paul","paul.jpg","he is paul-like");
          // demo.updatePerson(1,"Joe","joe.jpg","joe is joey");
-          //  demo.readPerson(0);
+            demo.readPerson(0);
             //demo.deletePerson(2);
             //demo.readPerson(2);
 
             //demo.createSkill("testSkill",1);
             //demo.updateSkill(2,"test2",2);
             //demo.deleteSkill(1);
-           // demo.readSkill(2);
+            demo.readSkill(2);
         } finally {
             demo.close();
         }

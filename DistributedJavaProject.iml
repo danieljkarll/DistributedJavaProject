@@ -61,6 +61,9 @@
     </orderEntry>
     <orderEntry type="library" name="Spring" level="application" />
     <orderEntry type="library" name="Spring MVC-4.3.18.RELEASE" level="project" />
-    <orderEntry type="library" name="Hibernate 5.4.5-5.4.5" level="project" />
+    <orderEntry type="library" name="Hibernate 5.4.9-5.4.9" level="project" />
+    <orderEntry type="library" name="com.mchange:c3p0:0.9.5.4" level="project" />
+    <orderEntry type="library" name="jstl:jstl:1.2" level="project" />
+    <orderEntry type="library" name="org.hibernate.validator:hibernate-validator:6.1.0.Final" level="project" />
   </component>
 </module>
