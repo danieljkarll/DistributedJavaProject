@@ -10,7 +10,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
-    <!-- This is the front controller -->
+    <!-- This is the front FinalProject.controller -->
     <servlet>
         <!-- matches servlet-name below -->
         <servlet-name>dispatcher</servlet-name>
@@ -23,4 +23,7 @@
         <!-- Meaning all web requests are handled by dispatcher servlet -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+    <!--<error-page>
+        <location>/error</location>
+    </error-page>-->
 </web-app>

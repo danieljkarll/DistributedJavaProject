@@ -1,6 +1,6 @@
-package dao;
+package FinalProject.dao;
 
-import hibernate.entity.Skill;
+import FinalProject.hibernate.entity.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -10,46 +10,48 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public class SkillDAOImpl implements  SkillDAO {
+public class PersonDAOImpl implements PersonDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
     @Override
-    public void saveSKill(Skill theSKill) {
+    public void savePerson(Person thePerson) {
+        // Get current Hibernate session
         Session session = sessionFactory.getCurrentSession();
 
-        session.saveOrUpdate(theSKill);
+        // save/update the donut
+        session.saveOrUpdate(thePerson);
     }
 
     @Override
-    public Skill getSkill(int skillId) {
+    public Person readPerson(int personID) {
         Session session = sessionFactory.getCurrentSession();
-
-        return session.get(Skill.class, skillId);
+        return session.get(Person.class, personID);
     }
-
     @Override
-    public void deleteSkill(int theId) {
+    public void deletePerson(int theId) {
+        // Get current Hibernate session
         Session session = sessionFactory.getCurrentSession();
 
         // Delete object using primary key
-        Query query = session.createQuery("delete from Skill where id = :doomedSkillId");
+        Query query = session.createQuery("delete from Person where id = :doomedPersonId");
         // Set parameter value
-        query.setParameter("doomedSkillId", theId);
+        query.setParameter("doomedPersonId", theId);
 
         // Perform the delete
         query.executeUpdate();
     }
 
     @Override
-    public List<Skill> getSkills() {
+    public List<Person> getPersons() {
         // Get current Hibernate session
         Session session = sessionFactory.getCurrentSession();
 
         // Get list of donuts from query
-        List<Skill> skillList = session.createQuery("from Skill", Skill.class).getResultList();
+        List<Person> personList = session.createQuery("from Person", Person.class).getResultList();
 
         // Return results
-        return skillList;
+        return personList;
     }
+
 }

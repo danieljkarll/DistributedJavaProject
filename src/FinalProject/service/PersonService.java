@@ -1,7 +1,6 @@
-package service;
+package FinalProject.service;
 
-import hibernate.entity.Person;
-import org.springframework.web.multipart.MultipartFile;
+import FinalProject.hibernate.entity.Person;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package dao;
+package FinalProject.dao;
 
-import hibernate.entity.Person;
+import FinalProject.hibernate.entity.Person;
 
 import java.util.List;
 

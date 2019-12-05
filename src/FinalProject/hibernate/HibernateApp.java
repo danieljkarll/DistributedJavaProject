@@ -1,14 +1,11 @@
-package hibernate;
+package FinalProject.hibernate;
 
-import hibernate.entity.Gender;
-import hibernate.entity.Person;
-import hibernate.entity.Skill;
+import FinalProject.hibernate.entity.Gender;
+import FinalProject.hibernate.entity.Person;
+import FinalProject.hibernate.entity.Skill;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-
-import java.util.Date;
-import java.util.List;
 
 public class HibernateApp {
 

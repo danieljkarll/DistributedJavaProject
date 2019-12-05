@@ -1,4 +1,4 @@
-package controller;
+package FinalProject.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +17,7 @@ public class HomeController {
         return "index";
     }
 
-    @RequestMapping(path = "/errors")
+    @RequestMapping(path = "/error")
     public String showErrorPage(HttpServletRequest request, Model theModel) {
         int httpErrorCode = (Integer) request.getAttribute("javax.servlet.error.status_code");
         String errorMsg;

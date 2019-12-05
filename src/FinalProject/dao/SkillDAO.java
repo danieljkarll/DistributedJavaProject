@@ -1,6 +1,6 @@
-package dao;
+package FinalProject.dao;
 import java.util.List;
-import hibernate.entity.Skill;
+import FinalProject.hibernate.entity.Skill;
 
 public interface SkillDAO {
 

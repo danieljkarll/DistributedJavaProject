@@ -1,6 +1,6 @@
-package dao;
+package FinalProject.dao;
 
-import hibernate.entity.Gender;
+import FinalProject.hibernate.entity.Gender;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;

@@ -1,7 +1,7 @@
-package service;
+package FinalProject.service;
 
-import dao.GenderDAO;
-import hibernate.entity.Gender;
+import FinalProject.dao.GenderDAO;
+import FinalProject.hibernate.entity.Gender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

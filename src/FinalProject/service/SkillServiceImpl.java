@@ -1,7 +1,7 @@
-package service;
+package FinalProject.service;
 
-import dao.SkillDAO;
-import hibernate.entity.Skill;
+import FinalProject.dao.SkillDAO;
+import FinalProject.hibernate.entity.Skill;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

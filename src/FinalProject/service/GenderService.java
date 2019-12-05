@@ -1,8 +1,6 @@
-package service;
+package FinalProject.service;
 
-import hibernate.entity.Gender;
-
-import java.util.List;
+import FinalProject.hibernate.entity.Gender;
 
 public interface GenderService {
 

@@ -1,7 +1,6 @@
-package service;
-
-import dao.PersonDAO;
-import hibernate.entity.Person;
+package FinalProject.service;
+import FinalProject.dao.PersonDAO;
+import FinalProject.hibernate.entity.Person;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

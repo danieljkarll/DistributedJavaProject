@@ -1,6 +1,6 @@
-package service;
+package FinalProject.service;
 
-import hibernate.entity.Skill;
+import FinalProject.hibernate.entity.Skill;
 
 import java.util.List;
 

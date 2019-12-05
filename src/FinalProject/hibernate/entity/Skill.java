@@ -1,4 +1,4 @@
-package hibernate.entity;
+package FinalProject.hibernate.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;

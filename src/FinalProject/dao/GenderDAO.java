@@ -1,7 +1,7 @@
-package dao;
+package FinalProject.dao;
 
 
-import hibernate.entity.Gender;
+import FinalProject.hibernate.entity.Gender;
 
 public interface GenderDAO {
 
