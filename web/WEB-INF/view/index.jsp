@@ -21,7 +21,7 @@
     <a href="index.html" id="indexPage" class="urlNav">
         Home
     </a>
-    <a href="companions.html" id="companionsPage" class="urlNav">
+    <a href="person/addPage" id="companionsPage" class="urlNav">
         Create Companions
     </a>
     <a href="person/list" id="currentCompanionsPage" class="urlNav">

@@ -41,7 +41,7 @@ public class PersonController {
     @GetMapping("/addPage")
     public String addPerson(Model theModel) {
         Person thePerson = new Person();
-
+        System.out.println("here");
         theModel.addAttribute("person", thePerson);
 
         theModel.addAttribute("personService", personService.getPersons());
