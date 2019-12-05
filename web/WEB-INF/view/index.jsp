@@ -20,7 +20,7 @@
         Home
     </a>
     <a href="companions.html" id="companionsPage" class="urlNav">
-        Add Companions
+        Create Companions
     </a>
     <a href="currentCompanions.html" id="currentCompanionsPage" class="urlNav">
         Current Companions
