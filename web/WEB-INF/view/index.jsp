@@ -9,7 +9,7 @@
 </head>
 <body>
 <ul>
-    <li>Companion List<a href="/donut/list">Page</a></li>
+    <li>Companion List<a href="person/list">Page</a></li>
 </ul>
 <div class="navigationWrapper">
     <a href="index.html" id="indexPage" class="urlNav">
