@@ -2,6 +2,7 @@ package FinalProject.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -16,6 +17,14 @@ public class HomeController {
         System.out.println("in home");
         return "index";
     }
+
+    @RequestMapping(value = "/showCompanionPage", method = RequestMethod.GET)
+    public String showSearchPage() {
+        System.out.println("zzz");
+
+        return "list-companions";
+    }
+
 
     @RequestMapping(path = "/error")
     public String showErrorPage(HttpServletRequest request, Model theModel) {

@@ -11,7 +11,6 @@
     <tr>
         <th></th>
         <th>Name</th>
-        <th>Description</th>
         <th>SelfieFileName</th>
         <th>Bio</th>
         <th>Gender</th>
@@ -21,9 +20,10 @@
         <tr>
             <td>
             <td>${tempPerson.name}</td>
-            <td>${tempDonut.bio}</td>
-            <td>${tempDonut.selfiefilename}</td>
-            <td>${tempDonut.genderid}</td>
+            <td>${tempPerson.selfiefile}</td>
+            <td>${tempPerson.bio}</td>
+            <td>${tempPerson.gender.gender}</td>
+
         </tr>
     </c:forEach>
 </table>

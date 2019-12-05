@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import FinalProject.service.GenderService;
 import FinalProject.service.PersonService;
 import FinalProject.service.SkillService;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 
 import java.util.List;
@@ -33,10 +34,6 @@ public class PersonController {
 
         // Add the list of donuts to the model
         theModel.addAttribute("persons", personList);
-        System.out.println("we in this boi");
-        System.out.println("we in this boi");
-
-        System.out.println("we in this boi");
 
         // Return the name of the view
         return "list-companions";

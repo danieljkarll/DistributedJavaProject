@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
@@ -8,6 +9,11 @@
 
 </head>
 <body>
+
+<form:form method = "GET" action = "showCompanionPage">
+    <input type = "submit" value = "Search Page"/>
+</form:form>
+
 <ul>
     <li>Companion List<a href="person/list">Page</a></li>
 </ul>
