@@ -20,9 +20,9 @@
         <tr>
             <td>
             <td>${tempPerson.name}</td>
+            <img src="${contextPath}/resources/img/${tempPerson.selfiefile}"></td>
             <td>${tempPerson.selfiefile}</td>
             <td>${tempPerson.bio}</td>
-            <td>${tempPerson.gender.gender}</td>
 
         </tr>
     </c:forEach>

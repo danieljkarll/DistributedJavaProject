@@ -24,8 +24,8 @@
     <a href="companions.html" id="companionsPage" class="urlNav">
         Create Companions
     </a>
-    <a href="currentCompanions.html" id="currentCompanionsPage" class="urlNav">
-        Current Companions
+    <a href="person/list" id="currentCompanionsPage" class="urlNav">
+        List Friends
     </a>
     <div href="courses" id="coursePage" class="urlNav">
         View Courses

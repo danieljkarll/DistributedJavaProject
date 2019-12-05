@@ -34,8 +34,20 @@ public class PersonController {
 
         // Add the list of donuts to the model
         theModel.addAttribute("persons", personList);
-
         // Return the name of the view
         return "list-companions";
     }
+
+    @GetMapping("/addPage")
+    public String addPerson(Model theModel) {
+        Person thePerson = new Person();
+
+        theModel.addAttribute("person", thePerson);
+
+        theModel.addAttribute("personService", personService.getPersons());
+        // Add the list of donuts to the model
+        // Return the name of the view
+        return "createCompanion";
+    }
+
 }
