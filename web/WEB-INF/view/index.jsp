@@ -10,18 +10,21 @@
 </head>
 <body>
 
-<form:form method = "GET" action = "showCompanionPage">
-    <input type = "submit" value = "Search Page"/>
-</form:form>
-
 <ul>
     <li>Companion List<a href="person/list">Page</a></li>
+</ul>
+
+<ul>
+    <li>Gender<a href="person/listGenders">List</a></li>
+</ul>
+<ul>
+    <li>Gender Add <a href="person/showAddGenderForm">Page</a></li>
 </ul>
 <div class="navigationWrapper">
     <a href="index.html" id="indexPage" class="urlNav">
         Home
     </a>
-    <a href="person/addPage" id="companionsPage" class="urlNav">
+    <a href="person/showAddPersonForm" id="companionsPage" class="urlNav">
         Create Companions
     </a>
     <a href="person/list" id="currentCompanionsPage" class="urlNav">

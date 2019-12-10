@@ -6,14 +6,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 public class GenderServiceImpl implements GenderService{
     @Autowired
     private GenderDAO genderDAO;
 
     @Override
-    public void saveGender(Gender thePerson) {
-        genderDAO.saveGender(thePerson);
+    public void saveGender(Gender theGender) {
+        genderDAO.saveGender(theGender);
+    }
+
+    @Override
+    @Transactional
+    public List<Gender> listGenders() {
+        return genderDAO.getGenders();
     }
 
     @Override

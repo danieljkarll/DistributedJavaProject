@@ -1,11 +1,14 @@
 package FinalProject.dao;
 
 import FinalProject.hibernate.entity.Gender;
+import FinalProject.hibernate.entity.Person;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 @Repository
 public class GenderDAOImpl implements GenderDAO {
@@ -20,7 +23,17 @@ public class GenderDAOImpl implements GenderDAO {
         // save/update the donut
         session.saveOrUpdate(theGender);
     }
+    @Override
+    public List<Gender> getGenders() {
+        // Get current Hibernate session
+        Session session = sessionFactory.getCurrentSession();
 
+        // Get list of donuts from query
+        List<Gender> genderList = session.createQuery("from Gender ", Gender.class).getResultList();
+
+        // Return results
+        return genderList;
+    }
 
     @Override
     public Gender getGender(int genderId) {
